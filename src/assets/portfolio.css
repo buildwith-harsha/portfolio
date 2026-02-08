@@ -1,0 +1,176 @@
+/* =========================
+   NEWSPAPER DESIGN SYSTEM
+========================= */
+:root {
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Libre Baskerville', serif;
+
+  /* Authentic newsprint colors */
+  --paper: #f3f1ed;        /* warm off-white paper */
+  --ink: #1b1b1b;          /* softened black ink */
+  --muted-ink: #55524e;    /* aged ink */
+  --accent: #7a1c1c;       /* old editorial red */
+  --line: #cfcac2;         /* faded rule lines */
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   BODY / PAPER TEXTURE
+========================= */
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.75;
+
+  /* subtle paper grain */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.heading,
+.title,
+.homeMainPhrase {
+  font-family: var(--font-heading);
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+
+.heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Front-page headline */
+.home .headline {
+  font-size: 68px;
+  letter-spacing: -1.2px;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+.section {
+  scroll-margin-top: 120px;
+  min-height: 70vh;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--paper);
+}
+
+/* =========================
+   TEXT
+========================= */
+.font-size-20 {
+  font-size: 18px;
+}
+
+p {
+  color: var(--ink);
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* =========================
+   RULES / DIVIDERS
+========================= */
+.rule {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin: 40px 0;
+}
+
+/* =========================
+   FORMS
+========================= */
+input,
+textarea,
+button {
+  font-family: var(--font-body);
+  background: transparent;
+  color: var(--ink);
+}
+
+/* =========================
+   BUTTONS (PRINT FEEL)
+========================= */
+.btn.solid {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+}
+
+.btn.outline {
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+}
+
+/* =========================
+   IMAGES (PRINT INK EFFECT)
+========================= */
+img {
+  filter: grayscale(100%) contrast(1.05);
+  mix-blend-mode: multiply;
+}
+
+/* =========================
+   HIGHLIGHTS (EDITOR MARK)
+========================= */
+.highlight {
+  background: linear-gradient(
+    to bottom,
+    transparent 65%,
+    rgba(122, 28, 28, 0.08) 65%
+  );
+  padding: 0 2px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 24px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .home .headline {
+    font-size: 44px;
+  }
+}
