@@ -1,71 +1,121 @@
 <template>
-  <section class="section projects editorial">
+  <section class="section projects">
     <!-- Section label -->
-    <p class="kicker">Case Studies</p>
+    <p class="kicker">Case Records</p>
 
     <!-- Heading -->
     <h2 class="heading">Projects</h2>
 
-    <!-- Editorial grid -->
-    <div class="projects-grid">
-      <Card
-        title="HR Management System"
-        desc="A full-scale internal ERP system built using Laravel and Vue, covering payroll, attendance, performance tracking, and dashboards used daily by employees."
-      />
+    <div class="rule"></div>
 
-      <Card
-        title="College Management System"
-        desc="A Laravel-based academic management platform handling student records, courses, attendance, and administrative workflows."
-      />
+    <!-- Newspaper columns -->
+    <div class="projects-columns">
+      <article class="news-card">
+        <h3 class="project-title">HR Management System</h3>
+        <p class="project-desc">
+          A full-scale internal ERP platform covering payroll, attendance,
+          employee performance dashboards, and operational reporting,
+          built using Laravel and Vue and used in daily workflows.
+        </p>
+      </article>
 
-      <Card
-        title="Kanban & Workflow Tracker"
-        desc="A task and story-point driven Kanban system designed to measure productivity, timelines, and employee performance metrics."
-      />
+      <article class="news-card">
+        <h3 class="project-title">College Management System</h3>
+        <p class="project-desc">
+          An academic management system designed to handle student records,
+          course administration, attendance tracking, and institutional
+          workflows using Laravel.
+        </p>
+      </article>
+
+      <article class="news-card">
+        <h3 class="project-title">Kanban & Workflow Tracker</h3>
+        <p class="project-desc">
+          A story-point–driven Kanban system created to measure productivity,
+          timelines, and team performance, supporting real-world project
+          tracking and reporting.
+        </p>
+      </article>
     </div>
   </section>
 </template>
 
-<script setup>
-import Card from "@/components/Card.vue"
-</script>
-
 <style scoped>
-/* Section spacing */
-.editorial {
+/* =========================
+   SECTION WRAPPER
+========================= */
+.projects {
   padding: 80px 60px;
 }
 
-/* Small section label */
+/* =========================
+   KICKER
+========================= */
 .kicker {
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted-ink);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-family: var(--font-body);
 }
 
-/* Grid layout */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 30px;
-  max-width: 1000px;
-  margin: 60px auto 0;
+/* =========================
+   NEWSPAPER COLUMNS
+========================= */
+.projects-columns {
+  padding-top : 30px;
+  column-count: 3;
+  column-gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* =========================
+   PROJECT ARTICLE (ARCHIVE STYLE)
+========================= */
+.news-card {
+  break-inside: avoid;
+  margin-bottom: 34px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+/* =========================
+   PROJECT TITLE
+========================= */
+.project-title {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   PROJECT BODY
+========================= */
+.project-desc {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--muted-ink);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+  .projects-columns {
+    column-count: 2;
   }
 }
 
-@media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 700px) {
+  .projects-columns {
+    column-count: 1;
   }
 }
 </style>

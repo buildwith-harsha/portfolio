@@ -4,7 +4,10 @@
     <p class="kicker">Feature Story</p>
 
     <!-- Headline -->
-    <h2 class="heading">About Me</h2>
+    <h2 class="heading">About the Developer</h2>
+
+    <!-- Byline -->
+    <p class="byline">By Harshavardhini Manikandan • Portfolio Edition</p>
 
     <div class="about-grid">
       <!-- Image column -->
@@ -14,33 +17,32 @@
           class="Harshavardhini-photo"
         />
         <figcaption>
-          Designing and maintaining systems used in real-world workflows.
+          The developer behind production-grade systems used in everyday workflows.
         </figcaption>
-
       </figure>
 
       <!-- Article column -->
       <div class="about-content">
         <p>
           One year deep into turning
-          <span class="highlight">business fantasies</span>
-          into reality. These ERP systems didn’t just stay as ideas — they were
-          actually implemented and used inside the company for real evaluation
-          and tracking.
+          <span class="highlight">business ideas</span>
+          into real-world systems. These ERP platforms didn’t remain concepts —
+          they were implemented, evaluated, and used inside organizations for
+          day-to-day operations.
 
-          Modules like <span class="highlight">Payroll</span> and
-          <span class="highlight">Kanban</span> became part of everyday workflow.
-          From story point calculation and time scoring to employee performance
-          dashboards, the system slowly started doing what it was built for —
-          measuring, tracking, and sometimes even exposing a little too much.
+          Modules such as <span class="highlight">Payroll</span> and
+          <span class="highlight">Kanban</span> became part of routine workflow.
+          From story-point calculation and time tracking to performance dashboards,
+          the systems gradually began fulfilling their original purpose — measuring,
+          organizing, and occasionally revealing more than expected.
 
           <span class="pull-quote">
-            “There’s something addictive about watching a raw idea evolve into a
-            system people depend on every single day.”
+            “There’s something addictive about watching a raw idea evolve into
+            infrastructure people rely on every day.”
           </span>
 
-          Even the quiet workers in the background — cron jobs and scheduled
-          tasks — played a big role in keeping everything running smoothly.
+          Even the quieter components — cron jobs, queues, and scheduled tasks —
+          played a critical role in keeping operations consistent and dependable.
         </p>
       </div>
     </div>
@@ -52,7 +54,7 @@
    SECTION WRAPPER
 ========================= */
 .feature-article {
-  padding: 90px 60px;
+  padding: 80px 60px;
 }
 
 /* =========================
@@ -64,7 +66,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted-ink);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-family: var(--font-body);
 }
 
@@ -73,8 +75,19 @@
 ========================= */
 .heading {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 34px;
   text-align: center;
+  margin-bottom: 6px;
+}
+
+/* =========================
+   BYLINE
+========================= */
+.byline {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted-ink);
+  font-style: italic;
   margin-bottom: 40px;
 }
 
@@ -84,7 +97,7 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 60px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -93,30 +106,30 @@
 ========================= */
 .Harshavardhini-photo {
   width: 100%;
-  max-width: 250px;
-  filter: grayscale(100%);
+  max-width: 240px;
+  filter: grayscale(100%) contrast(1.05);
+  border: 3px solid var(--ink);
   border-radius: 0;
 }
 
-
+/* Caption */
 figcaption {
+  margin-top: 6px;
   font-size: 10px;
   font-variant: small-caps;
   letter-spacing: 0.8px;
-  font-style: italic;
   color: var(--muted-ink);
-  font-style: italic;
+  text-align: center;
 }
-
 
 /* =========================
    ARTICLE TEXT
 ========================= */
 .about-content p {
   column-count: 2;
-  column-gap: 36px;
-  font-size: 15.5px; /* authentic newspaper size */
-  line-height: 1.75;
+  column-gap: 34px;
+  font-size: 14.8px; /* true print scale */
+  line-height: 1.85;
   text-align: justify;
   font-family: var(--font-body);
 }
@@ -124,7 +137,7 @@ figcaption {
 /* Drop cap */
 .about-content p::first-letter {
   font-family: var(--font-heading);
-  font-size: 56px;
+  font-size: 52px;
   float: left;
   line-height: 0.9;
   margin: 6px 12px 0 0;
@@ -136,8 +149,8 @@ figcaption {
 .highlight {
   background: linear-gradient(
     to bottom,
-    transparent 60%,
-    rgba(139, 0, 0, 0.12) 60%
+    transparent 65%,
+    rgba(122, 28, 28, 0.08) 65%
   );
   padding: 0 2px;
 }
@@ -148,10 +161,10 @@ figcaption {
 .pull-quote {
   display: block;
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.4;
-  margin: 26px 0;
-  padding-left: 18px;
+  margin: 24px 0;
+  padding-left: 16px;
   border-left: 3px solid var(--ink);
   column-span: all;
 }
@@ -166,7 +179,7 @@ figcaption {
 
   .about-content p {
     column-count: 1;
-    font-size: 15px;
+    font-size: 14.5px;
   }
 }
 </style>

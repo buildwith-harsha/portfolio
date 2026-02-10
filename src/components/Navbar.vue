@@ -1,10 +1,20 @@
 <template>
   <nav class="navbar">
+    <!-- Top line -->
+    <div class="top-rule"></div>
+
     <!-- Masthead -->
     <div class="masthead">
       <img src="@/assets/NameSticker.png" class="name-logo" />
-      <p class="edition">Portfolio Edition • 2026</p>
+      <div class="meta">
+        <span>Portfolio Edition</span>
+        <span>•</span>
+        <span>2026</span>
+      </div>
     </div>
+
+    <!-- Bottom line -->
+    <div class="bottom-rule"></div>
 
     <!-- Sections -->
     <ul class="sections">
@@ -21,66 +31,103 @@ const menu = [
   { name: "About", id: "about" },
   { name: "Skills", id: "skills" },
   { name: "Projects", id: "projects" },
-  { name: "Resume", id: "resume" },
+  { name: "Resume", id: "resume" }
 ]
 </script>
 
 <style scoped>
+/* =========================
+   NAVBAR WRAPPER
+========================= */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 100;
 
   background: var(--paper);
-  border-bottom: 3px solid var(--ink);
-
-  padding: 18px 40px 12px;
+  padding: 18px 40px 14px;
 }
 
-/* masthead area */
+/* =========================
+   RULES (NEWSPAPER LINES)
+========================= */
+.top-rule,
+.bottom-rule {
+  height: 2px;
+  background: var(--ink);
+}
+
+.top-rule {
+  margin-bottom: 12px;
+}
+
+.bottom-rule {
+  margin-top: 12px;
+}
+
+/* =========================
+   MASTHEAD
+========================= */
 .masthead {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .name-logo {
-  height: 42px;
+  height: 46px;
+  width: auto;              /* 👈 prevents stretching */
+  max-width: 240px;         /* 👈 safety limit */
+  object-fit: contain;      /* 👈 keeps proportions */
   display: block;
   margin: 0 auto;
 }
 
-.edition {
-  font-family: var(--font-body);
-  font-size: 12px;
-  color: var(--muted-ink);
-  letter-spacing: 1px;
-  margin-top: 4px;
-}
 
-/* section links */
-.sections {
+/* edition line */
+.meta {
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+
   display: flex;
   justify-content: center;
-  gap: 42px;
+  gap: 10px;
+}
+
+/* =========================
+   SECTION LINKS
+========================= */
+.sections {
+  margin-top: 14px;
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+
   list-style: none;
-  padding: 10px 0 0;
   border-top: 1px solid var(--line);
 }
 
 .sections a {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  letter-spacing: 2px;
   color: var(--ink);
   text-decoration: none;
 }
 
 .sections a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
-/* mobile */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
   .sections {
     gap: 20px;
@@ -89,6 +136,9 @@ const menu = [
 
   .name-logo {
     height: 36px;
+    width: auto;
+    max-width: 200px;
   }
 }
+
 </style>

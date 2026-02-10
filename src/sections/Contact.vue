@@ -1,15 +1,18 @@
 <template>
-  <section class="section contact letters">
+  <section class="section letters">
     <!-- Section label -->
-    <p class="kicker">Letters</p>
+    <p class="kicker">Letters to the Editor</p>
 
     <!-- Heading -->
-    <h2 class="heading">Contact</h2>
+    <h2 class="heading">Correspondence</h2>
+
+    <!-- Dateline -->
+    <p class="dateline">Chennai — Portfolio Edition</p>
 
     <!-- Editorial intro -->
     <p class="intro">
-      Interested in collaboration, opportunities, or just a thoughtful
-      conversation? Write in.
+      Readers wishing to discuss collaboration, opportunities, or professional
+      inquiry are invited to submit correspondence below.
     </p>
 
     <!-- Contact form -->
@@ -30,43 +33,67 @@
       </label>
 
       <button type="submit" class="submit-btn">
-        Send Letter
+        Submit Letter
       </button>
     </form>
   </section>
 </template>
 
-<script setup>
-</script>
-
 <style scoped>
-/* Section spacing */
+/* =========================
+   SECTION SPACING
+========================= */
 .letters {
   padding: 80px 60px 140px;
   text-align: center;
 }
 
-/* Small editorial label */
+/* =========================
+   KICKER
+========================= */
 .kicker {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted-ink);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-family: var(--font-body);
 }
 
-/* Intro text */
+/* =========================
+   HEADING
+========================= */
+.heading {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+/* =========================
+   DATELINE
+========================= */
+.dateline {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--muted-ink);
+  margin-bottom: 24px;
+}
+
+/* =========================
+   INTRO TEXT
+========================= */
 .intro {
   max-width: 520px;
-  margin: 20px auto 40px;
-  font-size: 15px;
-  line-height: 1.6;
+  margin: 0 auto 40px;
+  font-size: 14.5px;
+  line-height: 1.7;
   color: var(--muted-ink);
   font-family: var(--font-body);
 }
 
-/* Form layout */
+/* =========================
+   FORM LAYOUT
+========================= */
 .contact-form {
   max-width: 360px;
   margin: 0 auto;
@@ -76,55 +103,64 @@
   text-align: left;
 }
 
-/* Labels */
+/* =========================
+   LABELS
+========================= */
 label span {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 6px;
   font-family: var(--font-heading);
 }
 
-/* Inputs */
+/* =========================
+   INPUTS
+========================= */
 input,
 textarea {
   width: 100%;
-  padding: 10px 12px;
+  padding: 9px 10px;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13.5px;
   border: 1px solid var(--line);
   background: transparent;
   outline: none;
 }
 
-/* Focus style */
+/* focus */
 input:focus,
 textarea:focus {
   border-color: var(--ink);
 }
 
-/* Submit button */
+/* =========================
+   BUTTON
+========================= */
 .submit-btn {
-  margin-top: 10px;
+  margin-top: 14px;
   align-self: center;
-  padding: 10px 26px;
+  padding: 8px 24px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: var(--ink);
-  color: var(--paper);
-  border: none;
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
   cursor: pointer;
 }
 
-/* Hover */
+/* hover */
 .submit-btn:hover {
-  opacity: 0.9;
+  background: var(--ink);
+  color: var(--paper);
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 480px) {
   .contact-form {
     width: 100%;

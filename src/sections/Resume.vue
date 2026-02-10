@@ -4,16 +4,14 @@
     <p class="kicker">Special Insert</p>
 
     <!-- Heading -->
-    <h2 class="heading">Resume</h2>
+    <h2 class="heading">Résumé</h2>
 
-    <!-- Resume frame -->
-    <div class="resume-frame">
-      <iframe
-        :src="resumeUrl"
-        title="Resume Preview"
-        frameborder="0"
-      ></iframe>
-    </div>
+    <!-- Dateline -->
+    <p class="dateline">Portfolio Edition • Prepared for Professional Review</p>
+
+    <div class="rule"></div>
+
+
 
     <!-- Actions -->
     <div class="actions">
@@ -23,7 +21,7 @@
         rel="noopener"
         class="btn outline"
       >
-        Open Full Page
+        View Full Insert
       </a>
 
       <a
@@ -37,7 +35,8 @@
 
     <!-- Footer note -->
     <p class="note">
-      This resume is a printable insert, formatted for clarity and real-world use.
+      This résumé is presented as a printable insert, formatted for clarity,
+      accuracy, and real-world evaluation.
     </p>
   </section>
 </template>
@@ -47,37 +46,55 @@ const resumeUrl = "/resume/HarshaVardhiniManikandan-Resume.pdf"
 </script>
 
 <style scoped>
-/* Section spacing */
+/* =========================
+   SECTION WRAPPER
+========================= */
 .special-insert {
-  padding: 80px 60px;
+  padding: 80px 60px 100px;
   text-align: center;
 }
 
-/* Small editorial label */
+/* =========================
+   KICKER
+========================= */
 .kicker {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--muted-ink);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-family: var(--font-body);
 }
 
-/* Heading */
+/* =========================
+   HEADING
+========================= */
 .heading {
   font-family: var(--font-heading);
-  font-size: 42px;
-  margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 6px;
 }
 
-/* Resume frame */
+/* =========================
+   DATELINE
+========================= */
+.dateline {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--muted-ink);
+  margin-bottom: 24px;
+}
+
+/* =========================
+   RESUME FRAME
+========================= */
 .resume-frame {
   max-width: 820px;
   height: 520px;
   margin: 0 auto;
   border: 3px solid var(--ink);
+  background: #fff;
   overflow: hidden;
-  background: white;
 }
 
 /* Iframe */
@@ -86,54 +103,64 @@ const resumeUrl = "/resume/HarshaVardhiniManikandan-Resume.pdf"
   height: 100%;
 }
 
-/* Action buttons */
+/* =========================
+   ACTIONS
+========================= */
 .actions {
-  margin-top: 30px;
+  margin-top: 28px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
-/* Buttons */
+/* Buttons (print-style) */
 .btn {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 10px 22px;
+  padding: 8px 22px;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Outline button */
+/* Outline notice */
 .outline {
   border: 2px solid var(--ink);
   color: var(--ink);
 }
 
-/* Solid button */
+/* Solid notice */
 .solid {
   background: var(--ink);
   color: var(--paper);
 }
 
-/* Small note */
+/* =========================
+   NOTE
+========================= */
 .note {
   margin-top: 26px;
   font-size: 13px;
+  line-height: 1.6;
   color: var(--muted-ink);
   font-family: var(--font-body);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .resume-frame {
     height: 420px;
   }
 
   .heading {
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 
