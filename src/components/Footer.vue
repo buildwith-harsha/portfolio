@@ -8,19 +8,13 @@ const year = new Date().getFullYear()
 
     <div class="footer-content">
       <!-- Left -->
-      <p class="footer-text">
-        © {{ year }} Harshavardhini Manikandan
-      </p>
+      <p class="footer-text">© {{ year }} Harshavardhini</p>
 
       <!-- Center -->
-      <p class="footer-center">
-        Portfolio Edition • Built with Vue & Laravel
-      </p>
+      <p class="footer-center">Portfolio Edition • Built with Vue & Laravel</p>
 
       <!-- Right -->
-      <p class="footer-text">
-        Page 01
-      </p>
+      <p class="footer-text">Page 01</p>
     </div>
   </footer>
 </template>

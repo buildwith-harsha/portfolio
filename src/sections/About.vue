@@ -14,11 +14,7 @@
           </div>
 
           <div class="poster-photo-frame">
-            <img
-              src="@/assets/harsha_photo.jpg"
-              class="poster-photo"
-              alt="Harshavardhini"
-            />
+            <img src="@/assets/harsha_photo.jpeg" class="poster-photo" alt="Harshavardhini" />
           </div>
 
           <p class="poster-alias">"The Full-Stack Outlaw"</p>
@@ -37,32 +33,28 @@
             <span class="reward-sub">or a full-time offer</span>
           </div>
 
-          <p class="poster-footer">
-            By order of the Dev Community • Chennai, 2026
-          </p>
+          <p class="poster-footer">By order of the Dev Community • Chennai, 2026</p>
         </div>
       </div>
 
       <div class="about-content">
         <p>
-          Two years into turning caffeine, curiosity, and questionable sleep schedules
-          into working software, this developer has entered a new territory:
-          the <span class="highlight">Nike-inspired Sneaker Design Studio</span> —
-          where sneakers get makeovers and boring footwear gets a serious upgrade.
-
-          Armed with interactive 3D visuals and an alarming number of color combinations,
-          users can customize their dream kicks without spending a fortune on a pair
-          they might regret by Monday.
+          Two years into turning caffeine, curiosity, and questionable sleep schedules into working
+          software, this developer has entered a new territory: the
+          <span class="highlight">Nike-inspired Sneaker Design Studio</span> — where sneakers get
+          makeovers and boring footwear gets a serious upgrade. Armed with interactive 3D visuals
+          and an alarming number of color combinations, users can customize their dream kicks
+          without spending a fortune on a pair they might regret by Monday.
 
           <span class="pull-quote">
-            “Give a developer a sneaker, and they'll wear it.
-            Give them a color picker, and they'll redesign the entire shoe industry.”
+            “Give a developer a sneaker, and they'll wear it. Give them a color picker, and they'll
+            redesign the entire shoe industry.”
           </span>
 
-          After two years of building digital experiences, the mission remains the same:
-          turn wild ideas into working products, make interfaces feel less like homework,
-          and send stubborn bugs running for the hills. No sneakers were harmed in the
-          making of this project. A few bugs, however, were absolutely hunted down.
+          After two years of building digital experiences, the mission remains the same: turn wild
+          ideas into working products, make interfaces feel less like homework, and send stubborn
+          bugs running for the hills. No sneakers were harmed in the making of this project. A few
+          bugs, however, were absolutely hunted down.
         </p>
       </div>
     </div>
@@ -140,81 +132,10 @@
 }
 
 /* Vintage wanted poster */
-.wanted-poster {
-  --poster-paper: #e7d39f;
-  --poster-ink: #3c2b15;
-
-  position: relative;
-  width: 100%;
-  max-width: 370px;
-  padding: 24px 22px 20px;
-  color: var(--poster-ink);
-  text-align: center;
-  font-family: var(--font-heading);
-
-  background:
-    radial-gradient(
-      ellipse at 15% 15%,
-      rgba(255, 249, 219, 0.65),
-      transparent 55%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 5px,
-      rgba(67, 43, 15, 0.035) 6px
-    ),
-    var(--poster-paper);
-
-  border: 2px solid var(--poster-ink);
-  outline: 1px solid var(--poster-ink);
-  outline-offset: -8px;
-
-  box-shadow:
-    0 8px 20px rgba(38, 33, 28, 0.16),
-    inset 0 0 28px rgba(80, 48, 12, 0.13);
-
-  clip-path: polygon(
-    2% 1%, 12% 2%, 23% 0%, 35% 2%,
-    49% 1%, 63% 2%, 78% 0%, 98% 2%,
-    99% 15%, 97% 29%, 100% 43%,
-    98% 58%, 100% 73%, 98% 88%,
-    100% 98%, 84% 99%, 70% 98%,
-    53% 100%, 37% 98%, 21% 100%,
-    2% 98%, 1% 84%, 3% 68%,
-    1% 53%, 2% 36%, 0% 20%
-  );
-}
 
 /* Dark printed masthead */
-.poster-header {
-  margin: 0 0 16px;
-  padding: 9px 5px 5px;
-  background: transparent;
-  border-top: 5px double var(--poster-ink);
-  border-bottom: 5px double var(--poster-ink);
-}
-
-.wanted-label {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: clamp(34px, 4vw, 47px);
-  font-weight: 900;
-  letter-spacing: 5px;
-  line-height: 1.1;
-  color: var(--poster-ink);
-  text-shadow: 1px 1px 0 rgba(60, 43, 21, 0.18);
-}
 
 /* Portrait like a historic woodcut */
-.poster-photo-frame {
-  width: 78%;
-  margin: 0 auto 12px;
-  padding: 5px;
-  overflow: hidden;
-  border: 2px solid var(--poster-ink);
-  box-shadow: inset 0 0 0 1px var(--poster-paper);
-}
 
 .poster-photo {
   width: 100%;
@@ -223,11 +144,7 @@
   display: block;
   border: 0;
 
-  filter:
-    grayscale(1)
-    sepia(0.75)
-    contrast(1.35)
-    brightness(0.86);
+  filter: grayscale(1) sepia(0.75) contrast(1.35) brightness(0.86);
 
   mix-blend-mode: multiply;
 }
@@ -284,7 +201,56 @@
   line-height: 1.15;
   color: var(--accent);
 }
+.wanted-poster {
+  --poster-paper: var(--paper);
+  --poster-ink: var(--ink);
 
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  padding: 24px 22px 20px;
+  color: var(--poster-ink);
+  text-align: center;
+  font-family: var(--font-heading);
+
+  /* Exact same background color as the portfolio */
+  background: var(--paper);
+
+  border: 2px solid var(--line);
+  outline: 1px solid var(--line);
+  outline-offset: -8px;
+
+  box-shadow: 0 8px 20px rgba(38, 33, 28, 0.1);
+
+  clip-path: polygon(
+    2% 1%,
+    12% 2%,
+    23% 0%,
+    35% 2%,
+    49% 1%,
+    63% 2%,
+    78% 0%,
+    98% 2%,
+    99% 15%,
+    97% 29%,
+    100% 43%,
+    98% 58%,
+    100% 73%,
+    98% 88%,
+    100% 98%,
+    84% 99%,
+    70% 98%,
+    53% 100%,
+    37% 98%,
+    21% 100%,
+    2% 98%,
+    1% 84%,
+    3% 68%,
+    1% 53%,
+    2% 36%,
+    0% 20%
+  );
+}
 .reward-sub {
   font-size: 10px;
   font-style: italic;
@@ -308,7 +274,7 @@
   }
 
   .wanted-label {
-    font-size: 38px;
+    font-size: 30px;
   }
 }
 
@@ -316,44 +282,95 @@
    POSTER HEADER BAND
 ========================= */
 .poster-header {
-  background: #3b2a0a;
-  margin: -14px -14px 12px;
-  padding: 10px 8px 8px;
+  background: transparent;
+  margin: -14px -14px 10px;
+  padding: 8px;
+  border-top: 4px double var(--line);
+  border-bottom: 4px double var(--line);
 }
 
 .wanted-label {
   font-family: var(--font-heading);
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 900;
-  letter-spacing: 10px;
-  color: #f5e6c0;
+  letter-spacing: 5px;
+  color: var(--ink);
   text-transform: uppercase;
-  /* woodblock print imperfection */
-  text-shadow:
-    1px 1px 0 #000,
-    -1px -1px 0 rgba(255,255,255,0.05);
+}
+
+.poster-alias {
+  margin: 6px 0;
+  font-size: 11px;
+  color: var(--ink);
+}
+
+.poster-rule {
+  border-top: 1px solid var(--line);
+  margin: 7px 3px;
+}
+
+.poster-charges {
+  max-width: 270px;
+  margin: 0 auto;
+  padding: 3px;
+  font-size: 9px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.poster-reward-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0 4px;
+}
+
+.reward-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--ink);
+}
+
+.reward-amount {
+  font-size: 28px;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.reward-sub {
+  font-size: 9px;
+  color: var(--muted-ink);
+}
+
+.poster-footer {
+  margin-top: 8px;
+  font-size: 8px;
+  line-height: 1.5;
+  color: var(--muted-ink);
 }
 
 /* =========================
    PHOTO FRAME
 ========================= */
 .poster-photo-frame {
-  border: 3px solid #3b2a0a;
+  width: 55%;
+  max-width: 150px;
   margin: 4px auto 10px;
-  width: 85%;
+  padding: 3px;
   overflow: hidden;
-  position: relative;
-  /* inner aged-edge vignette */
-  box-shadow: inset 0 0 10px rgba(30,15,0,0.35);
+  border: 2px solid var(--line);
+  box-shadow: inset 0 0 0 1px var(--paper);
 }
 
 .poster-photo {
   width: 100%;
+  height: 155px;
+  object-fit: cover;
+  object-position: center 35%;
   display: block;
-  /* sepia-toned + high-contrast period print */
-  filter: grayscale(100%) sepia(35%) contrast(1.2) brightness(0.9);
-  mix-blend-mode: multiply;
   border: none;
+  filter: grayscale(100%) sepia(25%) contrast(1.1);
+  mix-blend-mode: multiply;
 }
 
 /* =========================
@@ -421,7 +438,7 @@
   letter-spacing: 2px;
   color: #7a1c1c;
   /* subtle letterpress indent */
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
   line-height: 1.1;
 }
 
@@ -445,7 +462,6 @@
   text-transform: uppercase;
   margin-top: 10px;
 }
-
 
 /* =========================
    ARTICLE TEXT
@@ -472,11 +488,7 @@
    SUBTLE HIGHLIGHTS
 ========================= */
 .highlight {
-  background: linear-gradient(
-    to bottom,
-    transparent 65%,
-    rgba(122, 28, 28, 0.08) 65%
-  );
+  background: linear-gradient(to bottom, transparent 65%, rgba(122, 28, 28, 0.08) 65%);
   padding: 0 2px;
 }
 

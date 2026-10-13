@@ -1,6 +1,5 @@
 <template>
   <section class="section projects-page">
-
     <!-- Section kicker -->
     <p class="kicker">Field Dispatches &amp; Featured Works</p>
 
@@ -8,16 +7,14 @@
     <div class="rule thick-rule"></div>
     <h2 class="section-banner">PROJECT CHRONICLE</h2>
     <div class="projects-dateline">
-      Compiled by Harshavardhini Manikandan &bull; Chennai, India &bull; Full-Stack Developer
+      Compiled by Harshavardhini &bull; Chennai, India &bull; Full-Stack Developer
     </div>
     <div class="rule thick-rule"></div>
 
     <!-- Main broadsheet grid -->
     <div class="broadsheet-grid">
-
       <!-- ===================== LEAD FEATURE (2/3 width) ===================== -->
       <div class="lead-column">
-
         <!-- Lead article: Sneaker Design Studio -->
         <article class="lead-article">
           <!-- Overline label -->
@@ -31,7 +28,7 @@
 
           <!-- Byline -->
           <p class="article-byline">
-            Reported by Harshavardhini Manikandan &bull; Full-Stack Development Desk
+            Reported by Harshavardhini &bull; Full-Stack Development Desk
           </p>
 
           <div class="lead-rule"></div>
@@ -39,39 +36,36 @@
           <!-- Lead article body — two-column newspaper layout -->
           <div class="lead-body">
             <p>
-              <span class="drop-cap">I</span>n a marketplace saturated with
-              static product pages, the
+              <span class="drop-cap">I</span>n a marketplace saturated with static product pages,
+              the
               <span class="text-emphasis">Sneaker Design Studio</span>
-              arrives as something altogether different — a browser-based
-              creative tool that places the power of customisation directly
-              in the hands of the customer.
+              arrives as something altogether different — a browser-based creative tool that places
+              the power of customisation directly in the hands of the customer.
             </p>
             <p>
-              Built entirely on the open web with Vue and Three.js, the studio
-              renders a <span class="text-emphasis">real-time 3D sneaker</span>
-              that responds instantly to colour pickers, material selectors, and
-              part-by-part editing controls. Each stroke of interaction is met
-              with immediate visual feedback — no page reloads, no waiting.
+              Built entirely on the open web with Vue and Three.js, the studio renders a
+              <span class="text-emphasis">real-time 3D sneaker</span>
+              that responds instantly to colour pickers, material selectors, and part-by-part
+              editing controls. Each stroke of interaction is met with immediate visual feedback —
+              no page reloads, no waiting.
             </p>
             <p>
-              The architecture behind the experience is deliberately lean.
-              A reactive state layer propagates changes across the scene graph,
-              keeping the renderer in perfect sync with user intent at all times.
-              The result is a workflow that feels less like configuring a product
-              and more like sketching on a live canvas.
+              The architecture behind the experience is deliberately lean. A reactive state layer
+              propagates changes across the scene graph, keeping the renderer in perfect sync with
+              user intent at all times. The result is a workflow that feels less like configuring a
+              product and more like sketching on a live canvas.
             </p>
 
             <!-- Pull quote -->
             <blockquote class="newspaper-pull-quote">
-              "What began as a technical exercise in WebGL became something
-              customers actually want to spend time inside."
+              "What began as a technical exercise in WebGL became something customers actually want
+              to spend time inside."
             </blockquote>
 
             <p>
-              The application is deployed on Vercel and performs at production
-              speed without compromise. It stands as evidence that immersive,
-              interactive commerce experiences are no longer the exclusive
-              territory of native apps — the browser is ready.
+              The application is deployed on Vercel and performs at production speed without
+              compromise. It stands as evidence that immersive, interactive commerce experiences are
+              no longer the exclusive territory of native apps — the browser is ready.
             </p>
           </div>
 
@@ -97,19 +91,16 @@
           <h3 class="secondary-headline">HR Management System</h3>
           <p class="article-byline">Laravel &bull; Vue.js &bull; Internal ERP Platform</p>
           <p class="article-body">
-            A full-scale internal ERP platform covering payroll, attendance,
-            employee performance dashboards, and operational reporting —
-            built with Laravel and Vue, deployed and actively used in
-            daily organisational workflows. Modules include story-point
+            A full-scale internal ERP platform covering payroll, attendance, employee performance
+            dashboards, and operational reporting — built with Laravel and Vue, deployed and
+            actively used in daily organisational workflows. Modules include story-point
             calculation, time tracking, and live performance metrics.
           </p>
         </article>
-
       </div>
 
       <!-- ===================== SIDE DISPATCHES (1/3 width) ===================== -->
       <aside class="dispatch-column">
-
         <!-- Vertical rule -->
         <div class="column-rule"></div>
 
@@ -119,10 +110,9 @@
           <h4 class="dispatch-headline">College Management System</h4>
           <div class="dispatch-rule"></div>
           <p class="dispatch-body">
-            An academic management system handling student records, course
-            administration, attendance tracking, and institutional workflows.
-            Built with Laravel; serves as the operational backbone for
-            multi-department academic oversight.
+            An academic management system handling student records, course administration,
+            attendance tracking, and institutional workflows. Built with Laravel; serves as the
+            operational backbone for multi-department academic oversight.
           </p>
           <p class="dispatch-stack">Stack: Laravel &bull; MySQL &bull; Blade</p>
         </div>
@@ -135,10 +125,9 @@
           <h4 class="dispatch-headline">Kanban &amp; Workflow Tracker</h4>
           <div class="dispatch-rule"></div>
           <p class="dispatch-body">
-            A story-point–driven Kanban board created to measure productivity,
-            timelines, and team performance. Supports real-world project
-            tracking with role-based views and automated reporting — revealing
-            more than spreadsheets ever could.
+            A story-point–driven Kanban board created to measure productivity, timelines, and team
+            performance. Supports real-world project tracking with role-based views and automated
+            reporting — revealing more than spreadsheets ever could.
           </p>
           <p class="dispatch-stack">Stack: Vue.js &bull; Laravel &bull; WebSockets</p>
         </div>
@@ -149,18 +138,15 @@
         <div class="notice-box">
           <p class="notice-title">Developer on Record</p>
           <p class="notice-body">
-            All systems listed above were shipped to production and remain
-            in active use inside real organisations.
-            Available for new commissions.
+            All systems listed above were shipped to production and remain in active use inside real
+            organisations. Available for new commissions.
           </p>
         </div>
-
       </aside>
     </div>
 
     <!-- Bottom ornamental rule -->
     <div class="rule thick-rule bottom-rule"></div>
-
   </section>
 </template>
 
@@ -190,7 +176,10 @@
 /* =========================
    RULES
 ========================= */
-.rule { width: 100%; margin: 0; }
+.rule {
+  width: 100%;
+  margin: 0;
+}
 
 .thick-rule {
   border-top: 3px solid var(--ink);
