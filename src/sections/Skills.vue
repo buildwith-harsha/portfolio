@@ -9,11 +9,7 @@
     <!-- Classified grid -->
     <div class="container">
       <div class="columns">
-        <span
-          class="word"
-          v-for="(skill, index) in skills"
-          :key="index"
-        >
+        <span class="word" v-for="(skill, index) in skills" :key="index">
           {{ skill }}
         </span>
       </div>
@@ -22,38 +18,38 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
-import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
+import { ref, onMounted } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const skills = ref([
-  "Vue.js",
-  "Laravel",
-  "ERP Systems",
-  "Dashboards",
-  "REST APIs",
-  "Databases",
-  "Cron Jobs",
-  "Queues & Workers",
-  "AWS",
-  "Laravel Dusk",
-  "Vitest",
-  "Git & CI/CD"
+  'React.js',
+  'JavaScript',
+  'Node.js',
+  'REST APIs',
+  'AWS',
+  'Git & GitHub',
+  'CI/CD',
+  'GitHub Actions',
+  'Docker',
+  'SQL & Databases',
+  'Redux Toolkit',
+  'Laravel',
 ])
 
 onMounted(() => {
-  gsap.from(".word", {
+  gsap.from('.word', {
     y: 24,
     opacity: 0,
     stagger: 0.06,
     duration: 0.6,
-    ease: "power2.out",
+    ease: 'power2.out',
     scrollTrigger: {
-      trigger: ".classifieds",
-      start: "top 80%",
-    }
+      trigger: '.classifieds',
+      start: 'top 80%',
+    },
   })
 })
 </script>
