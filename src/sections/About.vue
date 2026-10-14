@@ -39,11 +39,57 @@
           “Code is never just syntax on a dark screen—it is the invisible architecture that decides whether a person’s workday feels like an uphill struggle or effortless momentum.”
         </blockquote>
 
-        
+        <!-- Archival Verification Stamp -->
+        <div class="vintage-stamp" aria-hidden="true">
+          <div class="stamp-ring">
+            <span class="stamp-org">EDITORIAL DISPATCH</span>
+            <span class="stamp-icon">★ 2026 ★</span>
+            <span class="stamp-status">PASSED FOR RECORD</span>
+          </div>
+        </div>
       </article>
     </div>
   </section>
 </template>
+
+<script setup>
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+    // Portrait plate smooth entry
+    gsap.from('.portrait-wrapper', {
+      x: -20,
+      opacity: 0,
+      duration: 0.7,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.about-grid',
+        start: 'top 85%',
+        once: true,
+      },
+    })
+
+    // Story article text staggered entry
+    gsap.from('.about-content > *', {
+      y: 18,
+      opacity: 0,
+      stagger: 0.08,
+      duration: 0.55,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.about-content',
+        start: 'top 85%',
+        once: true,
+      },
+    })
+  }
+})
+</script>
 
 <style scoped>
 /* =========================
@@ -65,8 +111,6 @@
   letter-spacing: 4px;
   line-height: 1.1;
   color: var(--ink);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
   padding: 14px 0 12px;
   margin-bottom: 14px;
   width: 100%;
@@ -254,5 +298,54 @@
   .about-content p {
     font-size: 14.5px;
   }
+}
+
+/* =========================
+   VINTAGE RUBBER STAMP
+========================= */
+.vintage-stamp {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 10px 18px;
+  border: 2px dashed rgba(122, 28, 28, 0.75);
+  border-radius: 4px;
+  transform: rotate(-3.5deg);
+  font-family: var(--font-heading);
+  color: var(--accent);
+  text-align: center;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.vintage-stamp:hover {
+  transform: rotate(0deg) scale(1.04);
+  border-color: var(--accent);
+}
+
+.stamp-ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stamp-org {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.stamp-icon {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--accent);
+}
+
+.stamp-status {
+  font-size: 8.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 </style>

@@ -37,17 +37,20 @@ const skills = ref([
 ])
 
 onMounted(() => {
-  gsap.from('.word', {
-    y: 24,
-    opacity: 0,
-    stagger: 0.06,
-    duration: 0.6,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.classifieds',
-      start: 'top 80%',
-    },
-  })
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+    gsap.from('.word', {
+      y: 20,
+      opacity: 0,
+      stagger: 0.05,
+      duration: 0.5,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.classifieds',
+        start: 'top 85%',
+        once: true,
+      },
+    })
+  }
 })
 </script>
 
@@ -69,8 +72,6 @@ onMounted(() => {
   letter-spacing: 4px;
   line-height: 1.1;
   color: var(--ink);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
   padding: 14px 0 12px;
   margin-bottom: 14px;
   width: 100%;
@@ -102,13 +103,16 @@ onMounted(() => {
   text-transform: uppercase;
   text-align: center;
   color: var(--ink);
-  background: transparent;
+  transition: all 0.22s ease;
   cursor: default;
 }
 
-/* Subtle hover – newspaper style */
 .word:hover {
-  background: rgba(0, 0, 0, 0.03);
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(38, 33, 28, 0.18);
 }
 
 /* Responsive */

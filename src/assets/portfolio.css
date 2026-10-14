@@ -80,8 +80,9 @@ body {
    TYPOGRAPHY
 ========================= */
 
-/* Section headings (standardized broadsheet title banner) */
+/* Section headings (standardized broadsheet title banner with printing press draw) */
 .heading {
+  position: relative;
   font-family: var(--font-heading);
   font-size: 40px;
   font-weight: 700;
@@ -90,12 +91,44 @@ body {
   letter-spacing: 4px;
   line-height: 1.1;
   color: var(--ink);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
   padding: 14px 0 12px;
   margin-bottom: 14px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.heading::before,
+.heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heading::before {
+  top: 0;
+}
+
+.heading::after {
+  bottom: 0;
+}
+
+.heading.is-visible::before,
+.heading.is-visible::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heading::before,
+  .heading::after {
+    transform: scaleX(1);
+    transition: none;
+  }
 }
 
 /* Small labels */

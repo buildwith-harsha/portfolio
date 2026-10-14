@@ -54,8 +54,6 @@
   letter-spacing: 4px;
   line-height: 1.1;
   color: var(--ink);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
   padding: 14px 0 12px;
   margin-bottom: 24px;
   width: 100%;

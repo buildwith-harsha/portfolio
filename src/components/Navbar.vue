@@ -1,5 +1,10 @@
 <template>
   <header class="masthead-wrapper">
+    <!-- Editorial Red Ink Reading Progress Hairline -->
+    <div class="reading-progress-track" aria-hidden="true">
+      <div class="reading-progress-bar" :style="{ width: scrollProgress + '%' }"></div>
+    </div>
+
     <!-- ==============================================
          1. GRAND BROADSHEET MASTHEAD (Top of page)
          ============================================== -->
@@ -112,6 +117,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isScrolled = ref(false)
 const activeSection = ref('home')
+const scrollProgress = ref(0)
 
 const menu = [
   { name: 'Home', id: 'home' },
@@ -124,6 +130,10 @@ const menu = [
 const handleScroll = () => {
   // Show the slim ribbon once scrolled past the grand masthead
   isScrolled.value = window.scrollY > 160
+
+  // Calculate reading progress (0 - 100%)
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight
+  scrollProgress.value = docHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / docHeight) * 100)) : 0
 
   // Active section spy
   const scrollPos = window.scrollY + 100
@@ -149,6 +159,27 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* =========================
+   READING PROGRESS HAIRLINE
+========================= */
+.reading-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(38, 33, 28, 0.08);
+  z-index: 1001; /* above sticky ribbon */
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.08s ease-out;
+  box-shadow: 0 0 6px rgba(122, 28, 28, 0.45);
+}
 /* =========================
    MASTHEAD WRAPPER
 ========================= */

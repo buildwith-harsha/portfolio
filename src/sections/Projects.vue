@@ -134,6 +134,45 @@
   </section>
 </template>
 
+<script setup>
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+    // Lead column smooth entry
+    gsap.from('.lead-column', {
+      y: 26,
+      opacity: 0,
+      duration: 0.7,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.broadsheet-grid',
+        start: 'top 85%',
+        once: true,
+      },
+    })
+
+    // Dispatch column cards staggered typeset entry
+    gsap.from('.dispatch-card, .notice-box', {
+      y: 20,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 0.55,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.dispatch-column',
+        start: 'top 85%',
+        once: true,
+      },
+    })
+  }
+})
+</script>
+
 <style scoped>
 /* =========================
    SECTION WRAPPER
@@ -156,8 +195,6 @@
   letter-spacing: 4px;
   line-height: 1.1;
   color: var(--ink);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
   padding: 14px 0 12px;
   margin-bottom: 14px;
   width: 100%;
