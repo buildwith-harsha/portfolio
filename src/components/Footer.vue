@@ -13,8 +13,8 @@ const year = new Date().getFullYear()
       <!-- Center -->
       <p class="footer-center">Portfolio Edition • Built with Vue & Laravel</p>
 
-      <!-- Right -->
-      <p class="footer-text">Page 01</p>
+      <!-- Right spacer to balance grid alignment -->
+      <div class="footer-spacer"></div>
     </div>
   </footer>
 </template>

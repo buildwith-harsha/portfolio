@@ -1,408 +1,487 @@
-
 <template>
-  <section id="home" class="section home front-page">
-    <!-- Newspaper edition -->
-    <div class="edition-bar">
-      <span>VOL. I · NO. 01</span>
-      <span>CHENNAI, INDIA</span>
-      <span>PORTFOLIO EDITION · 2026</span>
+  <section id="home" class="section front-page">
+    <!-- Top Editorial Header Wire -->
+    <div class="top-wire">
+      <div class="wire-left">
+        <span class="wire-kicker">FEATURE STORY</span>
+        <div class="wire-line"></div>
+      </div>
+      <div class="wire-right">
+        <span>SOFTWARE</span>
+        <span class="wire-bullet">•</span>
+        <span>PEOPLE</span>
+        <span class="wire-bullet">•</span>
+        <span>A BETTER TOMORROW</span>
+      </div>
     </div>
 
-    <!-- Masthead -->
-    <header class="newspaper-masthead">
-      <p class="masthead-overline">An Independent Record of Digital Craft</p>
-      <h1 class="newspaper-name">The Daily Chronicle</h1>
-      <p class="masthead-subtitle">
-        ENGINEERING · TECHNOLOGY · DIGITAL INNOVATION
-      </p>
-    </header>
+    <!-- Main Broadsheet Editorial Frame -->
+    <div class="broadsheet-frame">
+      <!-- 1. LEFT COLUMN: Headline & Story Intro -->
+      <article class="hero-story">
+        <div>
+          <h1 class="hero-headline">
+            BEHIND<br />
+            EVERY SCREEN,<br />
+            <span class="headline-accent">THERE’S A STORY.</span>
+          </h1>
 
-    <div class="ornamental-rule">
-      <span>✦</span>
-    </div>
-
-    <!-- Lead story -->
-    <div class="front-kicker">
-      <span>THE DEVELOPER'S EDITION</span>
-      <span>FEATURE STORY</span>
-    </div>
-
-    <h2 class="front-headline">
-      Turning Business Problems
-      <span>Into Digital Solutions</span>
-    </h2>
-
-    <p class="front-byline">
-      By Harshavardhini
-      <span>·</span>
-      Full-Stack Developer
-    </p>
-
-    <div class="rule thin"></div>
-
-    <!-- Newspaper columns -->
-    <div class="front-grid">
-      <article class="front-column lead-story">
-        <p class="column-label">THE LEAD STORY</p>
-
-        <h3>
-          Building Systems That Work
-          Beyond the Screen
-        </h3>
-
-        <p class="lead-description">
-          In an age where businesses depend on dependable digital
-          infrastructure, one developer sets out to transform everyday
-          operational challenges into practical, production-ready software.
-        </p>
-
-        <div class="lead-image-placeholder">
-          <span class="engraving-symbol">✥</span>
-          <span>IDEAS INTO INFRASTRUCTURE</span>
-          <span class="engraving-symbol">✥</span>
-        </div>
-
-        <p class="column-copy">
-          From enterprise resource planning platforms to interactive
-          dashboards and workflow automation, the work centres on building
-          systems that people can rely on in their daily operations.
-        </p>
-      </article>
-
-      <article class="front-column">
-        <p class="column-label">THE ENGINEERING DESK</p>
-
-        <h3>From Concept to Production</h3>
-
-        <p class="column-copy">
-          Working across Vue.js, Laravel, APIs, and databases, the focus
-          remains on connecting thoughtful interfaces with dependable
-          backend systems.
-        </p>
-
-        <div class="rule thin"></div>
-
-        <h3>Technology With Purpose</h3>
-
-        <p class="column-copy">
-          Payroll, attendance, Kanban workflows, performance metrics,
-          and scheduled background tasks all contribute to software
-          designed around real operational needs.
-        </p>
-      </article>
-
-      <aside class="front-column side-story">
-        <div class="classified-box">
-          <p class="column-label">CAREER CLASSIFIEDS</p>
-          <h3>Developer Available</h3>
-          <div class="rule thin"></div>
-          <p class="column-copy">
-            Open to meaningful engineering challenges, collaborative teams,
-            and opportunities to build useful digital products.
+          <p class="hero-bio">
+            Every digital experience begins with a question, an idea, or a problem waiting to be solved. Behind the interfaces we interact with every day lies a world of creativity, logic, experimentation, and countless lines of code. From the smallest interaction to complex systems, each detail plays a part in turning an idea into something real.
           </p>
         </div>
 
-        <div class="side-note">
-          <p class="column-label">ON THE RECORD</p>
-          <p class="side-quote">
-            “Good software does more than function.
-            It makes work better.”
+        <div>
+          <p class="hero-byline">
+            By Harshavardhini
+            <span class="byline-dot">•</span>
+            Software Developer
+            <span class="byline-dot">•</span>
+            Backend, AI &amp; Web
           </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="hero-btn btn-solid">
+              VIEW PROJECTS &rarr;
+            </a>
+            <a href="#contact" class="hero-btn btn-outline">
+              GET IN TOUCH
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. CENTER COLUMN: Editorial Photo & Cursive Note -->
+      <div class="hero-photo-column">
+        <div class="photo-container">
+          <img
+            src="@/assets/harsha_mountain_newsprint.jpg"
+            alt="Harsha - Turning Ideas into Impact"
+            class="hero-photo"
+          />
+
+          <!-- Handwritten note overlay -->
+          <div class="handwritten-note">
+            <span class="note-line">Better</span>
+            <span class="note-line">Systems</span>
+            <span class="note-line">Brighter</span>
+            <span class="note-line">Tomorrows.</span>
+            <div class="note-underline"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. RIGHT COLUMN: Vertical Dispatch Strip -->
+      <aside class="hero-dispatch-strip">
+        <div class="strip-top">
+          <span>TURNING</span>
+          <span>IDEAS</span>
+          <span>INTO</span>
+          <span>IMPACT</span>
         </div>
 
-        <a href="#projects" class="front-link">
-          READ THE PROJECT CHRONICLE →
-        </a>
+        <div class="strip-divider"></div>
+
+        <div class="strip-middle">
+          <p>Code.</p>
+          <p>Learn.</p>
+          <p>Build.</p>
+          <p>Improve.</p>
+          <p>Repeat.</p>
+        </div>
+
+        <div class="strip-bottom">
+          <!-- Retro Wireframe Globe -->
+          <svg
+            class="wireframe-globe"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Outer circle -->
+            <ellipse cx="32" cy="32" rx="27" ry="27" stroke-width="1.1" />
+            <!-- Latitudes -->
+            <ellipse cx="32" cy="32" rx="27" ry="11" stroke-width="0.9" />
+            <ellipse cx="32" cy="20" rx="23" ry="7" stroke-width="0.8" stroke-dasharray="1 1" />
+            <ellipse cx="32" cy="44" rx="23" ry="7" stroke-width="0.8" stroke-dasharray="1 1" />
+            <!-- Longitudes -->
+            <ellipse cx="32" cy="32" rx="12" ry="27" stroke-width="0.9" />
+            <!-- Equator & Meridian -->
+            <line x1="5" y1="32" x2="59" y2="32" stroke-width="0.8" />
+            <line x1="32" y1="5" x2="32" y2="59" stroke-width="0.8" />
+          </svg>
+
+          <!-- Triple engraved linocut rules -->
+          <div class="engraved-marks">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </aside>
-    </div>
-
-    <div class="bottom-edition">
-      <span>INDEPENDENTLY BUILT</span>
-      <span>DESIGNED WITH PURPOSE</span>
-      <span>END OF FRONT PAGE</span>
     </div>
   </section>
 </template>
 
 <style scoped>
+/* =========================
+   PAGE CONTAINER
+========================= */
 .front-page {
   max-width: 1240px;
-  padding: 32px 48px 60px;
   margin: 0 auto;
+  padding: 24px 40px 60px;
 }
 
-.edition-bar {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  border-top: 2px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
-  font-size: 9px;
-  letter-spacing: 1.5px;
-}
-
-.newspaper-masthead {
-  text-align: center;
-  padding: 20px 0 10px;
-}
-
-.masthead-overline {
-  font-size: 10px;
-  text-align: center;
-  font-style: italic;
-  color: var(--muted-ink);
-}
-
-.newspaper-name {
-  font-family: var(--font-masthead);
-  font-size: clamp(42px, 7.5vw, 86px);
-  line-height: 1.15;
-  letter-spacing: 1px;
-}
-
-.masthead-subtitle {
-  font-size: 9px;
-  letter-spacing: 3px;
-  margin-top: 6px;
-}
-
-.ornamental-rule {
-  position: relative;
+/* =========================
+   TOP EDITORIAL WIRE
+========================= */
+.top-wire {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 10px 0 20px;
-  border-top: 3px double var(--ink);
-}
-
-.ornamental-rule span {
-  background: var(--paper);
-  padding: 0 12px;
-  margin-top: -13px;
-  font-size: 19px;
-}
-
-.front-kicker {
-  display: flex;
   justify-content: space-between;
-  gap: 12px;
-  color: var(--accent);
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.front-headline {
-  max-width: 1000px;
-  margin: 14px auto;
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: clamp(38px, 6vw, 68px);
-  font-weight: 900;
-  line-height: 1.02;
-  letter-spacing: -1.5px;
-  text-transform: uppercase;
-}
-
-.front-headline span {
-  display: block;
-  color: var(--accent);
-  font-style: italic;
-}
-
-.front-byline {
-  text-align: center;
-  font-size: 11px;
-  font-style: italic;
-  color: var(--muted-ink);
-  margin-bottom: 18px;
-}
-
-.front-byline span {
-  margin: 0 6px;
-}
-
-.front-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr 0.8fr;
   gap: 24px;
-  margin-top: 24px;
-  align-items: start;
-}
-
-.front-column {
-  min-width: 0;
-}
-
-.front-column + .front-column {
-  border-left: 1px solid var(--line);
-  padding-left: 20px;
-}
-
-.column-label {
-  color: var(--accent);
-  font-size: 9px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.front-column h3 {
-  font-family: var(--font-heading);
-  font-size: 23px;
-  line-height: 1.18;
   margin-bottom: 12px;
 }
 
-.lead-story h3 {
-  font-size: 31px;
+.wire-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
 }
 
-.lead-description {
+.wire-kicker {
   font-family: var(--font-heading);
-  font-size: 15px;
-  line-height: 1.65;
-  font-style: italic;
-  text-align: justify;
-  margin-bottom: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
 }
 
-.column-copy {
-  font-size: 12px;
-  line-height: 1.85;
+.wire-line {
+  height: 1px;
+  background: var(--line);
+  flex: 1;
+}
+
+.wire-right {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wire-bullet {
+  font-size: 8px;
+  opacity: 0.6;
+}
+
+/* =========================
+   BROADSHEET FRAME
+========================= */
+.broadsheet-frame {
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr 0.22fr;
+  align-items: stretch;
+  background: var(--paper);
+}
+
+/* =========================
+   1. HERO STORY (LEFT)
+========================= */
+.hero-story {
+  padding: 44px 40px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 460px;
+}
+
+.hero-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 3.8vw, 54px);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.headline-accent {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.hero-bio {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 26px;
+  max-width: 100%;
   text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.hero-byline {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--muted-ink);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.byline-dot {
+  opacity: 0.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-solid {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(122, 28, 28, 0.15);
+}
+
+.btn-solid:hover {
+  background: #5d1515;
+  border-color: #5d1515;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* =========================
+   2. HERO PHOTO (CENTER)
+========================= */
+.hero-photo-column {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  border-left: 1px solid var(--line);
+  padding: 16px;
+  background: var(--paper);
+}
+
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: 1px solid rgba(38, 33, 28, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  background: #fdfbf7;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+  border: 0;
+  filter: grayscale(100%) contrast(1.15) brightness(0.97);
+  mix-blend-mode: multiply;
+}
+
+/* Handwritten Cursive Note */
+.handwritten-note {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  z-index: 2;
+  font-family: var(--font-handwriting);
+  font-size: 24px;
+  line-height: 1.22;
+  color: #231c16;
+  transform: rotate(-6.5deg);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  letter-spacing: 0.3px;
+}
+
+.note-underline {
+  width: 88px;
+  height: 2px;
+  background: #231c16;
+  margin-top: 5px;
+  transform: rotate(1deg);
+  opacity: 0.85;
+  border-radius: 1px;
+}
+
+/* =========================
+   3. DISPATCH STRIP (RIGHT)
+========================= */
+.hero-dispatch-strip {
+  border-left: 1px solid var(--line);
+  padding: 26px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.strip-top {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
   color: var(--muted-ink);
 }
 
-.lead-image-placeholder {
-  min-height: 115px;
+.strip-divider {
+  width: 1px;
+  height: 38px;
+  background: var(--line);
+  margin: 16px 0;
+  opacity: 0.7;
+}
+
+.strip-middle {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted-ink);
+}
+
+.strip-middle p {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted-ink);
+}
+
+.strip-bottom {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px 8px;
-  margin-bottom: 16px;
-  border: 3px double var(--line);
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 4px,
-      rgba(38, 33, 28, 0.035) 5px
-    );
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: 10px;
-  letter-spacing: 2px;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
-.engraving-symbol {
-  font-size: 28px;
+.wireframe-globe {
+  width: 44px;
+  height: 44px;
+  color: var(--ink);
+  transform: rotate(-10deg);
 }
 
-.classified-box {
-  padding: 14px;
-  border: 2px solid var(--ink);
-  outline: 1px solid var(--ink);
-  outline-offset: 3px;
-  margin: 4px 3px 28px;
-}
-
-.classified-box h3 {
-  font-size: 23px;
-  text-align: center;
-}
-
-.side-note {
-  border-top: 3px double var(--ink);
-  border-bottom: 3px double var(--ink);
-  padding: 16px 0;
-  margin-bottom: 20px;
-}
-
-.side-quote {
-  font-family: var(--font-heading);
-  font-size: 19px;
-  font-style: italic;
-  line-height: 1.5;
-}
-
-.front-link {
-  font-size: 9px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: var(--accent);
-  text-decoration: underline;
-}
-
-.bottom-edition {
+.engraved-marks {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 32px;
-  padding-top: 10px;
-  border-top: 3px double var(--ink);
-  font-size: 8px;
-  letter-spacing: 1.2px;
+  flex-direction: column;
+  gap: 2.5px;
+  width: 38px;
 }
 
-@media (max-width: 850px) {
-  .front-grid {
+.engraved-marks span {
+  height: 1px;
+  background: var(--line);
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1040px) {
+  .broadsheet-frame {
     grid-template-columns: 1fr 1fr;
   }
 
-  .side-story {
-    grid-column: 1 / -1;
+  .hero-dispatch-strip {
+    display: none;
   }
 
-  .front-column.side-story {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-    padding: 22px 0 0;
-  }
-
-  .classified-box {
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
+  .hero-story {
+    padding: 32px 28px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   .front-page {
-    padding: 24px 18px 42px;
+    padding: 16px 20px 40px;
   }
 
-  .edition-bar {
-    font-size: 7px;
-    letter-spacing: 0.5px;
+  .top-wire {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  .front-kicker {
-    font-size: 8px;
-    letter-spacing: 1px;
+  .wire-line {
+    display: none;
   }
 
-  .front-grid {
+  .broadsheet-frame {
     grid-template-columns: 1fr;
-    gap: 24px;
   }
 
-  .front-column + .front-column {
+  .hero-photo-column {
     border-left: 0;
     border-top: 1px solid var(--line);
-    padding: 20px 0 0;
+    min-height: 320px;
   }
 
-  .lead-story h3 {
-    font-size: 27px;
+  .hero-story {
+    min-height: auto;
+    padding: 28px 20px;
   }
 
-  .bottom-edition {
-    flex-wrap: wrap;
-    font-size: 7px;
+  .hero-headline {
+    font-size: 32px;
   }
 }
 </style>

@@ -1,15 +1,7 @@
 <template>
   <section class="section projects-page">
-    <!-- Section kicker -->
-    <p class="kicker">Field Dispatches &amp; Featured Works</p>
-
-    <!-- Masthead-style section banner -->
-    <div class="rule thick-rule"></div>
-    <h2 class="section-banner">PROJECT CHRONICLE</h2>
-    <div class="projects-dateline">
-      Compiled by Harshavardhini &bull; Chennai, India &bull; Full-Stack Developer
-    </div>
-    <div class="rule thick-rule"></div>
+    <!-- Standardized Section Banner -->
+    <h2 class="heading">Project Chronicle</h2>
 
     <!-- Main broadsheet grid -->
     <div class="broadsheet-grid">
@@ -25,11 +17,6 @@
             The Sneaker Design Studio:<br />
             A Canvas That Moves
           </h3>
-
-          <!-- Byline -->
-          <p class="article-byline">
-            Reported by Harshavardhini &bull; Full-Stack Development Desk
-          </p>
 
           <div class="lead-rule"></div>
 
@@ -144,9 +131,6 @@
         </div>
       </aside>
     </div>
-
-    <!-- Bottom ornamental rule -->
-    <div class="rule thick-rule bottom-rule"></div>
   </section>
 </template>
 
@@ -155,67 +139,34 @@
    SECTION WRAPPER
 ========================= */
 .projects-page {
-  padding: 60px 60px 80px;
+  padding: 60px 60px 30px;
   max-width: 1200px;
   margin: auto;
 }
 
 /* =========================
-   KICKER
+   HEADLINE
 ========================= */
-.kicker {
+.heading {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  font-size: 11px;
-  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--muted-ink);
-  margin-bottom: 10px;
-  font-family: var(--font-body);
-}
-
-/* =========================
-   RULES
-========================= */
-.rule {
+  letter-spacing: 4px;
+  line-height: 1.1;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 14px 0 12px;
+  margin-bottom: 14px;
   width: 100%;
-  margin: 0;
-}
-
-.thick-rule {
-  border-top: 3px solid var(--ink);
-  margin: 0;
+  box-sizing: border-box;
 }
 
 .thin-rule {
   border-top: 1px solid var(--line);
   margin: 18px 0;
-}
-
-/* =========================
-   SECTION BANNER HEADLINE
-========================= */
-.section-banner {
-  font-family: var(--font-heading);
-  font-size: 52px;
-  text-align: center;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  padding: 10px 0 8px;
-  margin: 0;
-  line-height: 1;
-}
-
-/* =========================
-   DATELINE
-========================= */
-.projects-dateline {
-  text-align: center;
-  font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--muted-ink);
-  padding: 6px 0 8px;
 }
 
 /* =========================

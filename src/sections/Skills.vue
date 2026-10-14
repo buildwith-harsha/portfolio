@@ -1,8 +1,5 @@
 <template>
   <section class="section skills classifieds">
-    <!-- Section label -->
-    <p class="kicker">Technical Index</p>
-
     <!-- Heading -->
     <h2 class="heading">Skills</h2>
 
@@ -57,18 +54,27 @@ onMounted(() => {
 <style scoped>
 /* Section spacing */
 .classifieds {
-  padding: 80px 60px;
+  padding: 24px 60px 70px;
 }
 
-/* Small editorial label */
-.kicker {
+/* =========================
+   HEADLINE
+========================= */
+.heading {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  font-size: 12px;
-  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--muted-ink);
-  margin-bottom: 10px;
-  font-family: var(--font-body);
+  letter-spacing: 4px;
+  line-height: 1.1;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 14px 0 12px;
+  margin-bottom: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Grid wrapper */
@@ -83,7 +89,7 @@ onMounted(() => {
   grid-template-columns: repeat(3, minmax(160px, 1fr));
   gap: 16px 30px;
   max-width: 760px;
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 /* Individual skill item */

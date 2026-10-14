@@ -1,13 +1,7 @@
 <template>
   <section class="section letters">
-    <!-- Section label -->
-    <p class="kicker">Letters to the Editor</p>
-
-    <!-- Heading -->
+    <!-- Standardized Section Heading Banner -->
     <h2 class="heading">Correspondence</h2>
-
-    <!-- Dateline -->
-    <p class="dateline">Chennai — Portfolio Edition</p>
 
     <!-- Editorial intro -->
     <p class="intro">
@@ -44,20 +38,8 @@
    SECTION SPACING
 ========================= */
 .letters {
-  padding: 80px 60px 140px;
+  padding: 24px 60px 100px;
   text-align: center;
-}
-
-/* =========================
-   KICKER
-========================= */
-.kicker {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--muted-ink);
-  margin-bottom: 6px;
-  font-family: var(--font-body);
 }
 
 /* =========================
@@ -65,18 +47,19 @@
 ========================= */
 .heading {
   font-family: var(--font-heading);
-  font-size: 32px;
-  margin-bottom: 6px;
-}
-
-/* =========================
-   DATELINE
-========================= */
-.dateline {
-  font-size: 12px;
-  font-style: italic;
-  color: var(--muted-ink);
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 14px 0 12px;
   margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* =========================

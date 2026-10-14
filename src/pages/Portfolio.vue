@@ -5,7 +5,7 @@
   <About id="about" />
   <Skills id="skills" />
   <Projects id="projects" />
-  <Resume id="resume" />
+  <Contact id="contact" />
 
   <Footer />
 </template>
@@ -18,7 +18,5 @@ import Home from '@/sections/Home.vue'
 import About from '@/sections/About.vue'
 import Skills from '@/sections/Skills.vue'
 import Projects from '@/sections/Projects.vue'
-import Resume from '@/sections/Resume.vue'
-import Card from '@/components/Card.vue'
-
+import Contact from '@/sections/Contact.vue'
 </script>

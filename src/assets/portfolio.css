@@ -15,9 +15,18 @@
   --font-masthead: 'UnifrakturCook', cursive;
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Libre Baskerville', serif;
+  --font-handwriting: 'Kaushan Script', cursive;
 }
+
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url('./fonts/Kaushan_Script/KaushanScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .section {
-  scroll-margin-top: 160px; /* navbar height + breathing space */
+  scroll-margin-top: 68px; /* slim sticky ribbon height (46px) + breathing space */
 }
 /* =========================
    RESET
@@ -71,22 +80,22 @@ body {
    TYPOGRAPHY
 ========================= */
 
-/* Masthead (top of page / navbar) */
-.masthead {
-  font-family: var(--font-masthead);
-  font-size: 64px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-/* Section headings */
+/* Section headings (standardized broadsheet title banner) */
 .heading {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 14px 0 12px;
+  margin-bottom: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Small labels */
@@ -144,6 +153,17 @@ img {
   filter: grayscale(100%) contrast(1.1);
   mix-blend-mode: multiply;
   border: 3px solid var(--line);
+}
+
+/* Logos & icons exempt from borders */
+img.name-logo,
+img.ribbon-logo,
+.name-logo,
+.ribbon-logo {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 /* Captions */
@@ -204,13 +224,23 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+    letter-spacing: 3px;
+    padding: 12px 0 10px;
+  }
+}
+
 @media (max-width: 480px) {
   .columns-3 {
     column-count: 1;
   }
 
   .heading {
-    font-size: 28px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    padding: 10px 0 8px;
   }
 
   p {
