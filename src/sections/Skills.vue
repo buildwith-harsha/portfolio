@@ -37,19 +37,25 @@ const skills = ref([
 ])
 
 onMounted(() => {
+  // If ScrollTrigger / window is available, animate smoothly; ensure elements are visible
   if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-    gsap.from('.word', {
-      y: 20,
-      opacity: 0,
-      stagger: 0.05,
-      duration: 0.5,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.classifieds',
-        start: 'top 85%',
-        once: true,
-      },
-    })
+    ScrollTrigger.refresh()
+    gsap.fromTo(
+      '.word',
+      { y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.classifieds',
+          start: 'top 90%',
+          once: true,
+        },
+      }
+    )
   }
 })
 </script>
@@ -103,7 +109,7 @@ onMounted(() => {
   text-transform: uppercase;
   text-align: center;
   color: var(--ink);
-  transition: all 0.22s ease;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
   cursor: default;
 }
 
